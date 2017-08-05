@@ -1,0 +1,60 @@
+<!DOCTYPE html5>
+<head>
+  <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:600,300" rel="stylesheet" type="text/css"/>
+  <link rel="stylesheet" type="text/css" href="demo.css"/>
+  <link rel="stylesheet" type="text/css" href="loaders.css"/>
+  <style>
+		 body{
+			background-color:white;
+		 }
+		.loader{
+			margin-left:200px;
+		}
+		.pacman > div:nth-child(3), 
+		.pacman > div:nth-child(4), 
+		.pacman > div:nth-child(5), 
+		.pacman > div:nth-child(6) {
+			background-color: #f58611;
+		}
+		 .pacman > div:nth-child(2) {
+    width: 0px;
+    height: 0px;
+    border-right: 25px solid transparent;
+    border-top: 25px solid #f58611;
+    border-left: 25px solid #f58611;
+    border-bottom: 25px solid #f58611;
+    border-radius: 25px;
+    -webkit-animation: rotate_pacman_half_down 0.5s 0s infinite;
+            animation: rotate_pacman_half_down 0.5s 0s infinite;
+    margin-top: -50px;
+    position: relative;
+    left: -30px; }
+	
+	.pacman > div:first-of-type {
+    width: 0px;
+    height: 0px;
+    border-right: 25px solid transparent;
+    border-top: 25px solid #f58611;
+    border-left: 25px solid #f58611;
+    border-bottom: 25px solid #f58611;
+    border-radius: 25px;
+    -webkit-animation: rotate_pacman_half_up 0.5s 0s infinite;
+            animation: rotate_pacman_half_up 0.5s 0s infinite;
+    position: relative;
+    left: -30px; }
+		
+	
+
+</style>
+</head>
+<body>
+      <div class="loader">
+        <div class="loader-inner pacman">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+      </div>
+</body>

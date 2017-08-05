@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text-html"; charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+ <link rel="stylesheet" type="text/css" href="css/base.css">
+<link rel="stylesheet" type="text/css" href="csss/css.cs">
+	<title>列表</title>
+	<style type="text/css">
+	 header{
+            background-color: #f5f5f5;
+            color: #979797;
+            position: fixed;
+            z-index: 999;
+            width: 100%;
+        }
+        header>a{
+        	display: inline-block;
+        	float: left;
+        	color: #333;
+        	margin-left: 1rem;
+        }
+        header #lefticon{
+            font-size: 1rem;
+            float: left;
+        }
+        header #righticon{
+            float: right;
+            font-size: 1rem;
+            position: absolute;
+            top:0;
+            right: 1rem;
+            /*position: relative;*/
+        }
+        header #righticon span{
+        	position: absolute;
+        	left: .9rem;
+        	font-size: .5rem;
+        	color: white;
+        	text-align: center;
+        	width: .6rem;
+        	height: .6rem;
+        	background-color: green;
+        	border-radius: 50%;
+        }
+        header #search{
+            background-color:#e6e6e6;
+            position: relative;
+            height: 1rem;
+            width: 80%;
+            margin-left: 10%;
+            font-size: .6rem;
+            margin-top: .1rem;
+        }
+        header #search #searchicon{
+            position: absolute;
+            left: 1rem;
+            font-size: .8rem;
+        }
+        header #search input{
+            position: absolute;
+            width: 70%;
+            height: 1rem;
+            display: block;
+            border: none;
+            left: 3rem;
+            background-color:#e6e6e6;
+        }
+    section{
+    	padding-top: 1.4rem;
+    	padding-bottom: 3rem;
+    }
+     section ul.lis{
+     	list-style: none;
+     	display: flex;
+     	justify-content: center;
+     }
+     section ul.lis li{
+     	background-color: white;
+     	border:1px solid #eee;
+     	width: 33.33%;
+     	height: 2rem;
+     	line-height: 2rem;
+     	color: #333;
+     	font-size: .6rem;
+     	text-align: center;
+     }
+     
+     section>div.list{
+     	width: 100%;
+     	height: 100%;
+     	border-top:1px solid #333;
+     	border-bottom:1px solid #333;
+     	padding-left: 20px;
+     	background-color: white;
+     	padding-top: 10px;
+     	padding-bottom: 25px;
+     	margin-top: 1rem;
+     }
+     section>div.list a{
+     	color: #333;
+     	font-size: .7rem;
+     }
+     section div.img{
+     	width: 4rem;
+     	display: inline-block;
+     	float: left;
+     }
+     section div.img img{
+     	width: 100%;
+     }
+     section div.pst{
+     	padding-left: 5px;
+     	width: 70%;
+     	display: inline-block;
+     }
+     section div.pst img{
+     	width: 1.5rem;
+     	float: right;
+     }
+     section div.pst p:nth-child(2){
+     	margin-top: 1rem;
+     	color: orange;
+     }
+	footer{
+		width: 100%;
+		position: fixed;
+		background-color: #fff;
+		bottom:0;
+	}
+	footer>ul{
+		display: flex;
+		justify-content: center;
+	}
+	footer ul li{
+		border:1px solid #eee;
+		text-align: center;
+		width: 25%;
+	}
+	footer ul li a{
+		text-align: center;
+		font-size: .5rem;
+		color: #333;
+	}
+	.iconfont {
+		font-size: .8rem;
+		color: #333;
+	}
+	</style>
+	<script>
+        window.onload = function(){
+               document.getElementById("loader").style.display = "none";
+        }
+    </script>
+</head>
+<body>
+<div class="loader" id="loader">
+    <div class="loader-inner pacman">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+</div>
+<header>
+   	<a href=""><</a>
+    <div id="search">
+        <i class="fdj iconfont icon-sousuo" id="searchicon"></i>
+        <input type="search" placeholder="输入要搜索的商品"/>
+    </div>
+    <i class="iconfont icon-gouwuche" id="righticon"><span>2</span></i>
+</header>
+<section>
+	<ul class="lis">
+		<li>默认</li>
+		<li>价格∨</li>
+		<li>销量∨</li>
+	</ul>
+	<div class="list">
+		<a href="">
+			<div class="img"><img src="upload/20.jpg"></div>
+			<div class="pst">
+				<p>美国阿拉斯加黑鳕鱼（冻黑鳕鱼）</p>
+				<p>2998购物币+700积分 <img src="img/jia.png"></p>
+			</div>
+		</a>
+	</div>
+	<div class="list">
+		<a href="">
+			<div class="img"><img src="upload/20.jpg"></div>
+			<div class="pst">
+				<p>美国阿拉斯加黑鳕鱼（冻黑鳕鱼）</p>
+				<p>2998购物币+700积分 <img src="img/jia.png"></p>
+			</div>
+		</a>
+	</div>
+	<div class="list">
+		<a href="">
+			<div class="img"><img src="upload/20.jpg"></div>
+			<div class="pst">
+				<p>美国阿拉斯加黑鳕鱼（冻黑鳕鱼）</p>
+				<p>2998购物币+700积分 <img src="img/jia.png"></p>
+			</div>
+		</a>
+	</div>
+	<div class="list">
+		<a href="">
+			<div class="img"><img src="upload/20.jpg"></div>
+			<div class="pst">
+				<p>美国阿拉斯加黑鳕鱼（冻黑鳕鱼）</p>
+				<p>2998购物币+700积分 <img src="img/jia.png"></p>
+			</div>
+		</a>
+	</div>
+	<div class="list">
+		<a href="">
+			<div class="img"><img src="upload/20.jpg"></div>
+			<div class="pst">
+				<p>美国阿拉斯加黑鳕鱼（冻黑鳕鱼）</p>
+				<p>2998购物币+700积分 <img src="img/jia.png"></p>
+			</div>
+		</a>
+	</div>
+	<div class="list">
+		<a href="">
+			<div class="img"><img src="upload/20.jpg"></div>
+			<div class="pst">
+				<p>美国阿拉斯加黑鳕鱼（冻黑鳕鱼）</p>
+				<p>2998购物币+700积分 <img src="img/jia.png"></p>
+			</div>
+		</a>
+	</div>
+	<div class="list">
+		<a href="">
+			<div class="img"><img src="upload/20.jpg"></div>
+			<div class="pst">
+				<p>美国阿拉斯加黑鳕鱼（冻黑鳕鱼）</p>
+				<p>2998购物币+700积分 <img src="img/jia.png"></p>
+			</div>
+		</a>
+	</div>
+</section>
+
+<footer>
+	<ul>
+		<li><a href=""><i class="iconfont icon-shouye"></i><p>首页</p></a></li>
+		<li><a href=""><i class="iconfont icon-icon04"></i><p>分类</p></a></li>
+		<li><a href=""><i class="iconfont icon-gouwuche"></i><p>购物车</p></a></li>
+		<li><a href=""><i class="iconfont icon-yonghuming"></i><p>我的</p></a>
+		</li>
+	</ul>
+</footer>
+</body>
+</html>

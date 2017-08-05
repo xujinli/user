@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+
+    <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:600,300" rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet" type="text/css" href="css/demo.css"/>
+    <link rel="stylesheet" type="text/css" href="css/loaders.min.css"/>
+    <link rel="stylesheet" href="css/base.css"/>
+    <!--<script src="js/common.js"></script>-->
+    <style>
+        body{
+            background-color:white;
+        }
+        .loader{
+            margin-left:200px;
+        }
+        .pacman > div:nth-child(3),
+        .pacman > div:nth-child(4),
+        .pacman > div:nth-child(5),
+        .pacman > div:nth-child(6) {
+            background-color: #f58611;
+        }
+        .pacman > div:nth-child(2) {
+            width: 0px;
+            height: 0px;
+            border-right: 25px solid transparent;
+            border-top: 25px solid #f58611;
+            border-left: 25px solid #f58611;
+            border-bottom: 25px solid #f58611;
+            border-radius: 25px;
+            -webkit-animation: rotate_pacman_half_down 0.5s 0s infinite;
+            animation: rotate_pacman_half_down 0.5s 0s infinite;
+            margin-top: -50px;
+            position: relative;
+            left: -30px; }
+
+        .pacman > div:first-of-type {
+            width: 0px;
+            height: 0px;
+            border-right: 25px solid transparent;
+            border-top: 25px solid #f58611;
+            border-left: 25px solid #f58611;
+            border-bottom: 25px solid #f58611;
+            border-radius: 25px;
+            -webkit-animation: rotate_pacman_half_up 0.5s 0s infinite;
+            animation: rotate_pacman_half_up 0.5s 0s infinite;
+            position: relative;
+            left: -30px; }
+        html{
+             font-size: 10px;
+         }
+        @media only screen and (min-width: 401px){
+            html {
+                font-size: 13px !important;
+            }
+        }
+        body{
+           background-color:  #efeff4;
+            color: #666666;
+            text-align: center;
+        }
+        header{
+            background-color: #f5f5f5;
+            color: #979797;
+            position: fixed;
+            z-index: 999;
+            width: 100%;
+        }
+        header #lefticon{
+            font-size: 2rem;
+            float: left;
+        }
+        header #righticon{
+            float: right;
+            font-size: 2rem;
+            position: absolute;
+            top:0;
+            right: 0;
+        }
+        header #search{
+            background-color:#e6e6e6;
+            position: relative;
+            height: 3rem;
+            width: 80%;
+            margin-left: 10%;
+            font-size: 1rem;
+        }
+        header #search #searchicon{
+            position: absolute;
+            left: 1rem;
+            font-size: 2rem;
+        }
+        header #search input{
+            position: absolute;
+            width: 70%;
+            height: 3rem;
+            display: block;
+            border: none;
+            left: 3rem;
+            background-color:#e6e6e6;
+        }
+
+        #banner{
+            width: 100%;
+        }
+        #banner img{
+            width: 100%;
+        }
+
+        #cation ul li{
+            width: 25%;
+            background-color: #fff;
+            display: inline-block;
+            float: left;
+            text-align: center;
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+        }
+        #cation ul li img{
+            width: 58%;
+        }
+        #cation ul li p{
+            color:#666666 ;
+            font-size: 1.3rem;
+        }
+        #notice{
+            width: 90%;
+            background-color: #fff;
+            height: 4rem;
+            border-radius: 5px;
+            margin-top: 1rem;
+            margin-left: 5%;
+        }
+
+        #boutique{
+            margin-top: 1rem;
+            width: 100%;
+            font-size: 1.3rem;
+        }
+        #boutique ul li{
+            margin-top: 1rem;
+        }
+        #boutique ul li img{
+            width: 100%;
+        }
+        footer{
+            width: 100%;
+            position: fixed;
+            z-index: 88;
+            bottom: 0;
+            background-color: #fff;
+        }
+        footer ul li{
+            float: left;
+            display: inline-block;
+            height: 3rem;
+            width: 25%;
+        }
+        #lis{
+          width: 100%;
+          height: 100%;
+          position: fixed;
+          /*top:0;
+          left:0;
+          bottom:0;
+          right:0;*/
+          z-index: 999;
+          /*background-color: #000;
+          opacity: .3;*/
+          background:rgba(0,0,0,0.3);
+          left:0;
+          bottom:0;
+          display: none;
+        }
+        #lis>div{
+          position: absolute;
+          height:100%;
+          width:70%;
+          background-color: #343434;
+          left: -70%;
+        }
+        #lis ul{
+          width: 100%;
+          height: 100%;
+          /*position: fixed;*/
+          left: 0;
+          font-size: 1.8rem;
+          background-color: #343434;
+          opacity: 1;
+          z-index: 999;
+          color: white;
+        }
+        #lis ul li{
+         /* width: 100%;*/
+         padding-left:5%;
+         text-align: left;
+          height: 4rem;
+          border-bottom: 1px solid #4d4d4d;
+          line-height: 4rem;
+
+        }
+        #lis ul li a{
+          color: white;
+        }
+    </style>
+    <script>
+        window.onload = function(){
+               document.getElementById("loader").style.display = "none";
+        }
+    </script>
+</head>
+<body>
+<div class="loader" id="loader">
+    <div class="loader-inner pacman">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+</div>
+
+<header>
+    <i class="iconfont icon-iconfontcaidan" id="lefticon"></i>
+    <div id="search">
+        <i class="fdj iconfont icon-sousuo" id="searchicon"></i>
+        <input type="search" placeholder="输入要搜索的商品"/>
+    </div>
+    <i class="iconfont icon-erweima" id="righticon"></i>
+</header>
+
+<div id="banner">
+    <img src="upload/banner.jpg" alt=""/>
+</div>
+
+<div id="cation">
+    <ul>
+        <li><a href="#"><img src="img/icon1.png" alt=""/><p>报单专区</p></a></li>
+        <li><a href="#"><img src="img/icon2.png" alt=""/><p>联民商家</p></a></li>
+        <li><a href="#"><img src="img/icon3.png" alt=""/><p>猜你喜欢</p></a></li>
+        <li><a href="#"><img src="img/icon4.png" alt=""/><p>热门商品</p></a></li>
+    </ul>
+</div>
+<div style="clear: both; overflow: hidden"></div>
+
+<div id="notice"></div>
+
+<div id="boutique">
+    <p>---精品任选---</p>
+    <ul>
+        <li><a href="#"><img src="upload/1.jpg" alt=""/></a></li>
+        <li><a href="#"><img src="upload/2.jpg" alt=""/></a></li>
+    </ul>
+    <p>---热卖推荐---</p>
+    <ul>
+      <li></li>
+    </ul>
+</div>
+
+<footer>
+    <ul>
+        <li><a href=""><i class="iconfont icon-shouye"></i><p>首页</p></a></li>
+        <li><a href=""><i class="iconfont icon-icon04"></i><p>分类</p></a></li>
+        <li><a href=""><i class="iconfont icon-gouwuche"></i><p>购物车</p></a></li>
+        <li><a href=""><i class="iconfont icon-yonghuming"></i><p>我的</p></a></li>
+    </ul>
+</footer>
+<div id="lis">
+<div id="list">
+<ul >
+  <li><a href="">家纺家居</a></li>
+  <li><a href="">3C数码</a></li>
+  <li><a href="">家用电器</a></li>
+  <li><a href="">零食小吃</a></li>
+  <li><a href="">酒水饮料</a></li>
+  <li><a href="">个人健康</a></li>
+  <li><a href="">生活电器</a></li>
+  <li><a href="">服饰</a></li>
+  <li><a href="">五金家装</a></li>
+</ul>
+</div>
+</div>
+<script type="text/javascript">
+  var left = document.getElementById("lefticon");
+  var list = document.getElementById("list");
+  var lisdiv = document.getElementById("lis");
+  left.onclick = function(){
+      list.style.left = "0";
+    lisdiv.style.display = "block"; 
+  }
+  lisdiv.onclick = function(){
+    list.style.left = "-70%";
+    lisdiv.style.display = "none";
+  }
+</script>
+</body>

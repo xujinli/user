@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text-html"; charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+ <link rel="stylesheet" type="text/css" href="css/base.css">
+<link rel="stylesheet" type="text/css" href="csss/css.cs">
+<style type="text/css">
+*{
+	margin:0;
+	padding: 0;
+}
+ul{
+	list-style: none;
+}
+
+	header{
+		width: 100%;
+		height:100%;
+		background-color:#25cb83;
+		position: relative;
+	}
+	header>div>div>a{
+		color: white;
+		text-decoration: none;
+		font-size: .6rem;
+	}
+	header>div.hus{
+		background-color:#25cb83; 
+		width: 100%;
+		height: 2.5rem;
+		position: fixed;
+		line-height: 2.5rem;
+		top:0;
+		z-index: 999;
+	}
+	header div.bigu{
+		background-color::#25cb83; 
+		width: 90%;
+		margin:0 auto;
+	}
+	header>div.bigu{
+		padding-top:2rem;
+		margin-top:2.5rem;
+		margin-bottom: 2.5rem;
+	}
+	header>div>div>div.img{
+		width: 20%;
+		
+	}
+	header>div>div>div.img>img{
+		width: 100%;
+	}
+	header>div>div>div>p{
+		color: white;
+		font-size: .6rem;
+	}
+	header>div>div>div{
+		width: 30%;
+		display: inline-block;
+		vertical-align: top;
+	}
+	header div.qian{
+		text-align: center;
+		line-height: 1rem;
+		font-size: .6rem;
+		width: 3.5rem;
+		height: 1rem;
+		display: inline-block;
+		background-color: white;
+		border-radius: 4px;
+		color: green;
+		margin-top: 1rem;
+		float: right;
+	}
+	section{
+		width: 100%;
+		height: 100%;
+		background-color:#efeff4 ;
+	}
+	section>ul.yue{
+		width: 100%;
+		height: 3rem;
+		display: flex;
+		justify-content:center;
+		background-color: white ;
+
+	}
+	section>ul.yue>li{
+		border:1px solid #eee;
+	}
+	section>ul.yue>li>p{
+		font-size: .6rem;
+	}
+	section>ul.yue>li>p:nth-child(1){
+		margin-top: .5rem;
+		color: red;
+	}
+	section>ul.yue:nth-child(1)>li{
+		text-align: center;
+		width: 33.33%;
+	}
+	section>ul.yue:nth-child(2)>li{
+		text-align: center;
+		width: 50%;
+	}
+	section>div.list{
+		background-color: white;
+	}
+	section>div.list>ul{
+		height: 100%;
+	}
+	section>div.list>ul>li{
+		padding-left: 5%;
+		padding-right: 5%;
+		border-bottom: 1px solid #eee;
+		height: 2rem;
+		/*background-color: white;*/
+	}
+	section>div.list>ul>li>span{
+		color:#efeff4;
+		float: right;
+	}
+	section>div.list>ul>li>a{
+		width: 90%;
+		height: 100%;
+		margin:0 auto;
+		color: #333333;
+		text-decoration: none;
+		font-size: .8rem;
+		line-height: 2rem;
+	}
+	section>div.list>ul>li.lis{
+		height: .5rem;
+		background-color:#efeff4; 
+	}
+	section>div.list>ul>li>a:nth-child(2){
+		float: right;
+	}
+	.btn{
+		width: 100%;
+		height: 100%;
+		text-align: center;
+	}
+	.btn>a{
+		width: 90%;
+		height: 1.5rem;
+		color: white;
+		line-height: 1.5rem;
+		display: inline-block;
+		background-color: #25cb83;
+		margin: 3rem auto;
+	}
+	footer{
+		width: 100%;
+		position: fixed;
+		background-color: #fff;
+		bottom:0;
+	}
+	footer>ul{
+		display: flex;
+		justify-content: center;
+	}
+	footer ul li{
+		border:1px solid #eee;
+		text-align: center;
+		width: 25%;
+	}
+	footer ul li a{
+		text-align: center;
+		font-size: .5rem;
+		color: #333;
+	}
+	.iconfont {
+		font-size: .8rem;
+		color: #333;
+	}
+</style>
+</head>
+<body>
+<header>
+<div class="hus">
+	<div class="bigu">
+		<a href=""><返回</a>
+	</div>
+</div>
+<div class="bigu">
+	<div>
+		<div class="img">
+		<img src="img/touxiang.png">
+		</div>
+		<div>
+			<p>王小二</p>
+			<p>13035059866</p>
+			<p>普通会员</p>
+		</div>
+		<div class="qian">签到</div>
+	</div>
+</div>
+</header>
+<section>
+	<ul class="yue">
+		<li><p>74.00</p><p>现金余额</p></li>
+		<li><p>4789</p><p>可用积分</p></li>
+		<li><p>104598</p><p>待用积分</p></li>
+	</ul>
+	<ul class="yue">
+		<li><p>31000</p><p>商品兑换卷</p></li>
+		<li><p>56179</p><p>可倍增积分额值</p></li>
+	</ul>
+	<div class="list">
+		<ul>
+			<li class="lis"></li>
+			<li><a href=""><span>现金账户管理</span></a><span>></span></li>
+			<li><a href=""><span>现金充值</span></a><span>></span></li>
+			<li><a href=""><span>现金转账</span></a><span>></span></li>
+			<li class="lis"></li>
+			<li><a href=""><span>可用积分管理</span></a><span>></span></li>
+			<li><a href=""><span>待用积分管理</span></a><span>></span></li>
+			<li><a href=""><span>业务奖励积分</span></a><span>></span></li>
+			<li><a href=""><span>可用待转用</span></a><span>></span></li>
+			<li><a href=""><span>可用积分转账</span></a><span>></span></li>
+			<li class="lis"></li>
+			<li><a href=""><span>商品兑换券</span></a><span>></span></li>
+			<li><a href=""><span>报单商品券</span></a><span>></span></li>
+			<li><a href=""><span>申请加盟商家</span></a><span>></span></li>
+			<li><a href=""><span>申请运营商家</span></a><span>></span></li>
+			<li class="lis"></li>
+			<li><a href=""><span>消费订单管理</span></a><span>></span></li>
+			<li><a href=""><span>我的好友</span></a><span>></span></li>
+			<li><a href=""><span>修改密码</span></a><span>></span></li>
+			<li><a href=""><span>修改姓名</span></a><span>></span></li>
+		</ul>	
+	</div>
+	<div class="btn"><a href="">退出登录</a></div>
+</section>
+<footer>
+	<ul>
+		<li><a href=""><i class="iconfont icon-shouye"></i><p>首页</p></a></li>
+		<li><a href=""><i class="iconfont icon-icon04"></i><p>分类</p></a></li>
+		<li><a href=""><i class="iconfont icon-gouwuche"></i><p>购物车</p></a></li>
+		<li><a href=""><i class="iconfont icon-yonghuming"></i><p>我的</p></a></li>
+	</ul>
+</footer>
+</body>
+</html>
